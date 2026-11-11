@@ -4,12 +4,12 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'shot-polish/**'
+      - 'skills/video-shotcraft/shot-polish/**'
       - '.github/workflows/contact-sheet-tests.yml'
   push:
     branches: [main]
     paths:
-      - 'shot-polish/**'
+      - 'skills/video-shotcraft/shot-polish/**'
       - '.github/workflows/contact-sheet-tests.yml'
 
 permissions:
@@ -32,4 +32,4 @@ jobs:
           # Test distro FFmpeg, including Ubuntu 22.04's FFmpeg 4.4.
           export PATH="/usr/bin:$PATH"
           ffmpeg -version
-          python3 -m unittest discover -s shot-polish -p test_sheet.py -v
+          python3 -m unittest discover -s skills/video-shotcraft/shot-polish -p test_sheet.py -v

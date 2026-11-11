@@ -15,8 +15,8 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/Vincentwei1021/video-shotcraft)](https://github.com/Vincentwei1021/video-shotcraft/stargazers)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
-[![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-d97757)](SKILL.md)
-[![Codex](https://img.shields.io/badge/Codex-skill-10a37f)](SKILL.md)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-d97757)](skills/video-shotcraft/SKILL.md)
+[![Codex](https://img.shields.io/badge/Codex-skill-10a37f)](skills/video-shotcraft/SKILL.md)
 [![AtomGit Star](https://atomgit.com/VincentWei/video-shotcraft/star/badge.svg)](https://atomgit.com/VincentWei/video-shotcraft)
 
 <a href="https://trendshift.io/repositories/88911?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-88911" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/88911" alt="Vincentwei1021%2Fvideo-shotcraft | Trendshift" width="250" height="55"/></a>
@@ -37,7 +37,7 @@
 
 **流程**
 
-![8 秒循环流程动图：你的产品 → 抓取真实页面 → 镜头配方卡排分镜 → Remotion 动画 → 踩点剪辑与声音设计 → 渲染与逐帧验收 → MP4、动效工作台与剪映工程](assets/readme/workflow.gif)
+![8 秒循环流程动图：你的产品 → 抓取真实页面 → 镜头配方卡排分镜 → Remotion 动画 → 踩点剪辑与声音设计 → 渲染与逐帧验收 → MP4、动效工作台与剪映工程](skills/video-shotcraft/assets/readme/workflow.gif)
 
 ## 最近更新
 
@@ -50,7 +50,7 @@
 - **2026-08 · 系列新成员 [video-talkcraft](https://github.com/Vincentwei1021/video-talkcraft)**：口播视频版，
   给它口播稿和成品配音，所有动效节拍都钉在人声上（[78 条口播动效样片](https://vincentwei1021.github.io/video-talkcraft/)）。
 - **2026-08 · 剪映工程导出**：成片可导出为可编辑的剪映草稿——底片按镜头切段、字幕重建为原生文本轨、
-  SFX/BGM 独立音轨。Mac 剪映 11.2 实测验收（[方法](references/jianying-export.md)）。
+  SFX/BGM 独立音轨。Mac 剪映 11.2 实测验收（[方法](skills/video-shotcraft/references/jianying-export.md)）。
 
 ## ❤️ Sponsors
 
@@ -106,8 +106,8 @@ npx skills add Vincentwei1021/video-shotcraft
 ```bash
 git clone https://github.com/Vincentwei1021/video-shotcraft.git
 cd video-shotcraft
-ln -s "$(pwd)" ~/.claude/skills/video-shotcraft   # Claude Code
-ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
+ln -s "$(pwd)/skills/video-shotcraft" ~/.claude/skills/video-shotcraft   # Claude Code
+ln -s "$(pwd)/skills/video-shotcraft" ~/.codex/skills/video-shotcraft    # Codex
 ```
 
 国内访问 GitHub 慢的话，可以从 AtomGit 镜像克隆：
@@ -153,7 +153,7 @@ ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
 </table>
 
 每张卡在 `references/shots/<类别>/<卡名>.md`，对应的 Remotion 实现在 `demos/<类别>/<卡名>/`
-（怎么接进你的工程见 [demos/README.md](demos/README.md)）。
+（怎么接进你的工程见 [demos/README.md](skills/video-shotcraft/demos/README.md)）。
 
 ## 动效工作台
 
@@ -161,9 +161,9 @@ ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
 拆成镜头 / 转场 / 字幕 / 音效多轨；选中任意镜头可以改文案、字号和颜色，镜头可挪、可裁、可变速，镜头库里的
 150 个镜头都能直接拖上轨，改完用 Remotion 导出。预览与渲染逐帧一致。
 
-![动效工作台](workbench/docs/overview.png)
+![动效工作台](skills/video-shotcraft/workbench/docs/overview.png)
 
-[工作台图文指南：各区域与功能](workbench/GUIDE.md) · [成片接入契约](references/workbench.md)
+[工作台图文指南：各区域与功能](skills/video-shotcraft/workbench/GUIDE.md) · [成片接入契约](skills/video-shotcraft/references/workbench.md)
 
 ## 你会拿到什么
 
@@ -173,11 +173,11 @@ ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
 | Remotion 工程 | 整支片的源码：每个镜头都是一个 React 组件，你或 agent 都能改 |
 | 动效工作台 | 交付后自动打开：多轨时间线、属性面板、变速、换镜头、导出（[详情](#动效工作台)） |
 | 剪映工程 | 可选：可编辑的剪映草稿，镜头分段、字幕和音轨都能改 |
-| 社交平台发布 | 可选，用户要求时：通过 Upload-Post 把成片发到 TikTok / Instagram / YouTube / LinkedIn / X 等；先确认文案与平台、dry-run 后再发（[说明](references/publish-upload-post.md)） |
+| 社交平台发布 | 可选，用户要求时：通过 Upload-Post 把成片发到 TikTok / Instagram / YouTube / LinkedIn / X 等；先确认文案与平台、dry-run 后再发（[说明](skills/video-shotcraft/references/publish-upload-post.md)） |
 
 另外还附带：可复用的 Remotion 组件（2.5D 页面相机、字幕、闪切、数字滚动）、Freesound 音效搜索下载工具和 5 首 BGM、
 页面素材采集脚本，以及整套制作方法（素材采集、风格定调、分镜、声音设计、节奏卡点、最终验收），
-见 [references/](references/pipeline.md)。
+见 [references/](skills/video-shotcraft/references/pipeline.md)。
 
 ## 作品展示
 
@@ -216,7 +216,7 @@ Remotion 首次渲染时会自动下载自己的无头 Chrome。已在 macOS 上
 
 ```text
 video-shotcraft/
-├── SKILL.md                 # Agent 使用入口与核心制作规则
+├── skills/video-shotcraft/SKILL.md                 # Agent 使用入口与核心制作规则
 ├── references/
 │   ├── pipeline.md          # 完整制作流水线
 │   ├── shots/               # 124 张镜头配方卡，按功能分 10 类
@@ -241,17 +241,17 @@ video-shotcraft/
         └── bgm/             # 5 首 BGM 备选；SFX 按项目下载
 ```
 
-完整工作流和实现要求见 [SKILL.md](SKILL.md)、[制作流水线](references/pipeline.md) 与
-[视觉验收准则](references/aesthetic-rules.md)。
+完整工作流和实现要求见 [SKILL.md](skills/video-shotcraft/SKILL.md)、[制作流水线](skills/video-shotcraft/references/pipeline.md) 与
+[视觉验收准则](skills/video-shotcraft/references/aesthetic-rules.md)。
 
 </details>
 
 ## 音频与素材
 
 音效直接从 [Freesound](https://freesound.org) 按需下载到当前视频工程，共享本地音效库已移除。
-[选材指南](references/sfx-sourcing.md) 包含搜索、CC0 / CC BY 筛选、MP3 预览下载、测量与来源/署名清单。
+[选材指南](skills/video-shotcraft/references/sfx-sourcing.md) 包含搜索、CC0 / CC BY 筛选、MP3 预览下载、测量与来源/署名清单。
 CLI 使用 Python 标准库，下载与分析另需 FFmpeg，无需 API key。
-钉帧和混音见 [sound-design.md](references/sound-design.md)。模板保留历史固定音频供原样预览与回归验证，
+钉帧和混音见 [sound-design.md](skills/video-shotcraft/references/sound-design.md)。模板保留历史固定音频供原样预览与回归验证，
 为新产品制作时从 Freesound 选音。5 首 BGM 备选继续保留在 `assets/audio/bgm/`。
 
 模板内的产品截图为演示素材。对外发布成片前，请替换为你自己产品的截图，并确认其中的数据、客户信息和个人信息
@@ -261,7 +261,7 @@ CLI 使用 Python 标准库，下载与分析另需 FFmpeg，无需 API key。
 
 - 代码与文档：[Apache-2.0](LICENSE)。
 - Freesound 音效：逐文件许可记在项目来源清单中，CC BY 署名需随发布保留。
-- BGM：见 [ATTRIBUTION.md](assets/audio/ATTRIBUTION.md)；模板历史音频见 [模板来源记录](template/public/audio/ATTRIBUTION.md)。
+- BGM：见 [ATTRIBUTION.md](skills/video-shotcraft/assets/audio/ATTRIBUTION.md)；模板历史音频见 [模板来源记录](skills/video-shotcraft/template/public/audio/ATTRIBUTION.md)。
 - [Remotion](https://www.remotion.dev/) 有自己的[许可协议](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md)：
   个人与小团队免费，公司可能需要付费许可。
 

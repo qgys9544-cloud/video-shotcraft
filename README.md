@@ -15,8 +15,8 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/Vincentwei1021/video-shotcraft)](https://github.com/Vincentwei1021/video-shotcraft/stargazers)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
-[![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-d97757)](SKILL.md)
-[![Codex](https://img.shields.io/badge/Codex-skill-10a37f)](SKILL.md)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-d97757)](skills/video-shotcraft/SKILL.md)
+[![Codex](https://img.shields.io/badge/Codex-skill-10a37f)](skills/video-shotcraft/SKILL.md)
 [![AtomGit Star](https://atomgit.com/VincentWei/video-shotcraft/star/badge.svg)](https://atomgit.com/VincentWei/video-shotcraft)
 
 <a href="https://trendshift.io/repositories/88911?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-88911" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/88911" alt="Vincentwei1021%2Fvideo-shotcraft | Trendshift" width="250" height="55"/></a>
@@ -39,7 +39,7 @@ sharp, on-brand and fully editable.
 
 **How it works**
 
-![Eight-second workflow loop: product → capture real pages → storyboard with shot recipe cards → animate in Remotion → beat sync and sound design → render and frame QA → MP4, Motion Workbench and JianYing draft](assets/readme/workflow.gif)
+![Eight-second workflow loop: product → capture real pages → storyboard with shot recipe cards → animate in Remotion → beat sync and sound design → render and frame QA → MP4, Motion Workbench and JianYing draft](skills/video-shotcraft/assets/readme/workflow.gif)
 
 ## What's new
 
@@ -54,7 +54,7 @@ sharp, on-brand and fully editable.
   ([78 narration previews](https://vincentwei1021.github.io/video-talkcraft/)).
 - **2026-08 · JianYing (CapCut CN) export.** The final film becomes an editable JianYing draft: per-shot clips,
   native caption tracks, separate SFX/BGM tracks. Verified on JianYing Pro 11.2 for macOS
-  ([guide](references/jianying-export.md)).
+  ([guide](skills/video-shotcraft/references/jianying-export.md)).
 
 ## ❤️ Sponsors
 
@@ -110,8 +110,8 @@ Or by hand:
 ```bash
 git clone https://github.com/Vincentwei1021/video-shotcraft.git
 cd video-shotcraft
-ln -s "$(pwd)" ~/.claude/skills/video-shotcraft   # Claude Code
-ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
+ln -s "$(pwd)/skills/video-shotcraft" ~/.claude/skills/video-shotcraft   # Claude Code
+ln -s "$(pwd)/skills/video-shotcraft" ~/.codex/skills/video-shotcraft    # Codex
 ```
 
 In mainland China, clone from the AtomGit mirror if GitHub is slow:
@@ -157,7 +157,7 @@ Just describe the film. No command needed.
 </table>
 
 Each card lives in `references/shots/<category>/<card>.md`, with its Remotion implementation in
-`demos/<category>/<card>/` (see [demos/README.md](demos/README.md) for how to wire one into your project).
+`demos/<category>/<card>/` (see [demos/README.md](skills/video-shotcraft/demos/README.md) for how to wire one into your project).
 
 ## Motion Workbench
 
@@ -166,10 +166,10 @@ After delivery the skill opens a CapCut-style editor in your browser
 exactly as authored. Select any shot to edit its copy, font sizes and colours, move, trim or speed-ramp clips,
 drag in any of the 150 library shots, then export with Remotion. Preview and render are frame-identical.
 
-![Motion Workbench](workbench/docs/overview.png)
+![Motion Workbench](skills/video-shotcraft/workbench/docs/overview.png)
 
-[Workbench guide, every panel with screenshots](workbench/GUIDE.md) (Chinese) ·
-[Integration contract](references/workbench.md)
+[Workbench guide, every panel with screenshots](skills/video-shotcraft/workbench/GUIDE.md) (Chinese) ·
+[Integration contract](skills/video-shotcraft/references/workbench.md)
 
 ## What you get
 
@@ -179,11 +179,11 @@ drag in any of the 150 library shots, then export with Remotion. Preview and ren
 | Remotion project | The full source of your film: every shot is a React component you or the agent can change |
 | Motion Workbench | Opens after delivery: tracks, inspector, retime, swap shots, export ([details](#motion-workbench)) |
 | JianYing draft | Optional: an editable JianYing (CapCut CN) project with per-shot clips, captions and audio tracks |
-| Social publishing | Optional, when you ask: publish the finished film via Upload-Post to TikTok, Instagram, YouTube, LinkedIn, X and more. Confirm caption and platforms, then dry-run before posting ([guide](references/publish-upload-post.md)) |
+| Social publishing | Optional, when you ask: publish the finished film via Upload-Post to TikTok, Instagram, YouTube, LinkedIn, X and more. Confirm caption and platforms, then dry-run before posting ([guide](skills/video-shotcraft/references/publish-upload-post.md)) |
 
 Also in the box: reusable Remotion components (2.5D page camera, captions, flash cuts, digit rolls), Freesound SFX search/download tools and
 5 BGM tracks, page-capture scripts, and the production method itself (capture, visual direction, storyboarding,
-sound design, beat sync, final QA) in [references/](references/pipeline.md).
+sound design, beat sync, final QA) in [references/](skills/video-shotcraft/references/pipeline.md).
 
 ## Showcase
 
@@ -224,7 +224,7 @@ With these three flags, frame renders from the bundled template work.
 
 ```text
 video-shotcraft/
-├── SKILL.md                 # Agent entry point and core production rules
+├── skills/video-shotcraft/SKILL.md                 # Agent entry point and core production rules
 ├── references/
 │   ├── pipeline.md          # End-to-end production workflow
 │   ├── shots/               # 124 shot recipe cards in 10 functional categories
@@ -249,18 +249,18 @@ video-shotcraft/
         └── bgm/             # 5 BGM options; SFX downloaded per project
 ```
 
-For the full workflow see [SKILL.md](SKILL.md), the [production pipeline](references/pipeline.md) and the
-[visual QA criteria](references/aesthetic-rules.md).
+For the full workflow see [SKILL.md](skills/video-shotcraft/SKILL.md), the [production pipeline](skills/video-shotcraft/references/pipeline.md) and the
+[visual QA criteria](skills/video-shotcraft/references/aesthetic-rules.md).
 
 </details>
 
 ## Audio and assets
 
 SFX come directly from [Freesound](https://freesound.org), downloaded into each video's project.
-The shared SFX library has been removed. The [sourcing guide](references/sfx-sourcing.md) covers search,
+The shared SFX library has been removed. The [sourcing guide](skills/video-shotcraft/references/sfx-sourcing.md) covers search,
 CC0 / CC BY filtering, MP3 preview downloads, measurements and source/credit manifests. The Python CLI
 uses the standard library; downloading and analysis require FFmpeg. No API key is needed.
-[Sound design](references/sound-design.md) covers timing and mixing. The template retains its fixed
+[Sound design](skills/video-shotcraft/references/sound-design.md) covers timing and mixing. The template retains its fixed
 historical audio for playback and regression checks; new product videos source their SFX from Freesound.
 BGM options remain in `assets/audio/bgm/`.
 
@@ -271,7 +271,7 @@ product before publishing, and check whether any product, customer or personal d
 
 - Code and docs: [Apache-2.0](LICENSE).
 - Freesound audio: each file under its recorded license; retain the project manifest and publish required CC BY credits.
-- BGM: see [ATTRIBUTION.md](assets/audio/ATTRIBUTION.md). Historical template audio: see [template credits](template/public/audio/ATTRIBUTION.md).
+- BGM: see [ATTRIBUTION.md](skills/video-shotcraft/assets/audio/ATTRIBUTION.md). Historical template audio: see [template credits](skills/video-shotcraft/template/public/audio/ATTRIBUTION.md).
 - [Remotion](https://www.remotion.dev/) has its own
   [license](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md): free for individuals and small
   teams, companies may need a paid license.

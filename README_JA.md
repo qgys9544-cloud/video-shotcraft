@@ -15,8 +15,8 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/Vincentwei1021/video-shotcraft)](https://github.com/Vincentwei1021/video-shotcraft/stargazers)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
-[![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-d97757)](SKILL.md)
-[![Codex](https://img.shields.io/badge/Codex-skill-10a37f)](SKILL.md)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-d97757)](skills/video-shotcraft/SKILL.md)
+[![Codex](https://img.shields.io/badge/Codex-skill-10a37f)](skills/video-shotcraft/SKILL.md)
 [![AtomGit Star](https://atomgit.com/VincentWei/video-shotcraft/star/badge.svg)](https://atomgit.com/VincentWei/video-shotcraft)
 
 <a href="https://trendshift.io/repositories/88911?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-88911" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/88911" alt="Vincentwei1021%2Fvideo-shotcraft | Trendshift" width="250" height="55"/></a>
@@ -39,7 +39,7 @@ Claude Code や Codex に「プロダクトのプロモーション動画を作�
 
 **仕組み**
 
-![8 秒ループの制作フロー：プロダクト → 実ページをキャプチャ → レシピカードで絵コンテ → Remotion でアニメーション → ビート同期とサウンドデザイン → レンダリングとフレーム QA → MP4・ワークベンチ・剪映ドラフト](assets/readme/workflow.gif)
+![8 秒ループの制作フロー：プロダクト → 実ページをキャプチャ → レシピカードで絵コンテ → Remotion でアニメーション → ビート同期とサウンドデザイン → レンダリングとフレーム QA → MP4・ワークベンチ・剪映ドラフト](skills/video-shotcraft/assets/readme/workflow.gif)
 
 ## 最新情報
 
@@ -53,7 +53,7 @@ Claude Code や Codex に「プロダクトのプロモーション動画を作�
   原稿とボイスオーバーを渡すと、すべてのモーションが音声にロックされます
   （[78 本のナレーション用プレビュー](https://vincentwei1021.github.io/video-talkcraft/)）。
 - **2026-08 · 剪映（CapCut 中国版）書き出し**：完成映像を編集可能な剪映ドラフトに。ショット単位のクリップ、
-  ネイティブ字幕トラック、独立した SFX/BGM トラック。macOS 版剪映 11.2 で検証済み（[ガイド](references/jianying-export.md)）。
+  ネイティブ字幕トラック、独立した SFX/BGM トラック。macOS 版剪映 11.2 で検証済み（[ガイド](skills/video-shotcraft/references/jianying-export.md)）。
 
 ## ❤️ Sponsors
 
@@ -100,8 +100,8 @@ npx skills add Vincentwei1021/video-shotcraft
 ```bash
 git clone https://github.com/Vincentwei1021/video-shotcraft.git
 cd video-shotcraft
-ln -s "$(pwd)" ~/.claude/skills/video-shotcraft   # Claude Code
-ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
+ln -s "$(pwd)/skills/video-shotcraft" ~/.claude/skills/video-shotcraft   # Claude Code
+ln -s "$(pwd)/skills/video-shotcraft" ~/.codex/skills/video-shotcraft    # Codex
 ```
 
 ## 使い方
@@ -144,7 +144,7 @@ ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
 </table>
 
 各カードは `references/shots/<カテゴリ>/<カード名>.md`、Remotion 実装は `demos/<カテゴリ>/<カード名>/` にあります
-（プロジェクトへの組み込み方は [demos/README.md](demos/README.md) を参照）。
+（プロジェクトへの組み込み方は [demos/README.md](skills/video-shotcraft/demos/README.md) を参照）。
 
 ## モーションワークベンチ
 
@@ -153,10 +153,10 @@ ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
 文言・フォントサイズ・色を編集、クリップの移動・トリム・速度変更、ライブラリの 150 ショットのドラッグ追加、
 Remotion での書き出しができます。プレビューとレンダリングはフレーム単位で一致します。
 
-![モーションワークベンチ](workbench/docs/overview.png)
+![モーションワークベンチ](skills/video-shotcraft/workbench/docs/overview.png)
 
-[ワークベンチガイド（各パネルをスクリーンショット付きで）](workbench/GUIDE.md)（中国語）·
-[連携コントラクト](references/workbench.md)
+[ワークベンチガイド（各パネルをスクリーンショット付きで）](skills/video-shotcraft/workbench/GUIDE.md)（中国語）·
+[連携コントラクト](skills/video-shotcraft/references/workbench.md)
 
 ## 納品物
 
@@ -166,11 +166,11 @@ Remotion での書き出しができます。プレビューとレンダリン�
 | Remotion プロジェクト | 映像のソース一式。各ショットは React コンポーネントで、あなたもエージェントも変更できます |
 | モーションワークベンチ | 納品後に自動で開く：トラック、インスペクタ、速度変更、ショット差し替え、書き出し（[詳細](#モーションワークベンチ)） |
 | 剪映ドラフト | 任意：ショット単位のクリップ・字幕・音声トラックを編集できる剪映プロジェクト |
-| SNS 投稿 | 任意、依頼があれば：Upload-Post で完成映像を TikTok・Instagram・YouTube・LinkedIn・X などへ投稿。キャプションと投稿先を確認し、dry-run の後に投稿（[ガイド](references/publish-upload-post.md)） |
+| SNS 投稿 | 任意、依頼があれば：Upload-Post で完成映像を TikTok・Instagram・YouTube・LinkedIn・X などへ投稿。キャプションと投稿先を確認し、dry-run の後に投稿（[ガイド](skills/video-shotcraft/references/publish-upload-post.md)） |
 
 ほかにも、再利用できる Remotion コンポーネント（2.5D ページカメラ、字幕、フラッシュカット、数字ロール）、
 Freesound の SFX 検索・ダウンロードツールと BGM 5 曲、ページキャプチャスクリプト、そして制作手法そのもの（素材キャプチャ、ビジュアルの方向付け、
-絵コンテ、サウンドデザイン、ビート同期、最終 QA）を [references/](references/pipeline.md) に収録しています。
+絵コンテ、サウンドデザイン、ビート同期、最終 QA）を [references/](skills/video-shotcraft/references/pipeline.md) に収録しています。
 
 ## ショーケース
 
@@ -210,7 +210,7 @@ Remotion は初回レンダリング時にヘッドレス Chrome を自動でダ
 
 ```text
 video-shotcraft/
-├── SKILL.md                 # エージェントの入口と制作の基本ルール
+├── skills/video-shotcraft/SKILL.md                 # エージェントの入口と制作の基本ルール
 ├── references/
 │   ├── pipeline.md          # 制作ワークフロー全体
 │   ├── shots/               # 10 カテゴリ 124 枚のショットレシピカード
@@ -235,18 +235,18 @@ video-shotcraft/
         └── bgm/             # BGM 5 曲。SFX はプロジェクトごとに取得
 ```
 
-ワークフロー全体は [SKILL.md](SKILL.md)、[制作パイプライン](references/pipeline.md)、
-[ビジュアル QA 基準](references/aesthetic-rules.md) を参照してください。
+ワークフロー全体は [SKILL.md](skills/video-shotcraft/SKILL.md)、[制作パイプライン](skills/video-shotcraft/references/pipeline.md)、
+[ビジュアル QA 基準](skills/video-shotcraft/references/aesthetic-rules.md) を参照してください。
 
 </details>
 
 ## 音声と素材
 
 SFX は [Freesound](https://freesound.org) から各映像プロジェクトへ直接ダウンロードします。
-共有 SFX ライブラリは廃止しました。[選材ガイド](references/sfx-sourcing.md) に検索、CC0 / CC BY の選別、
+共有 SFX ライブラリは廃止しました。[選材ガイド](skills/video-shotcraft/references/sfx-sourcing.md) に検索、CC0 / CC BY の選別、
 MP3 プレビュー取得、解析、出典とクレジットの保存手順があります。Python 標準ライブラリを使用し、
 取得・解析には FFmpeg が必要です。API キーは不要です。
-タイミングとミックスは [sound-design.md](references/sound-design.md) を参照してください。
+タイミングとミックスは [sound-design.md](skills/video-shotcraft/references/sound-design.md) を参照してください。
 テンプレートの既存音声は再生・回帰確認用に保持します。新しい製品映像の SFX は Freesound で選び、
 BGM 5 曲は `assets/audio/bgm/` に引き続き収録しています。
 
@@ -257,7 +257,7 @@ BGM 5 曲は `assets/audio/bgm/` に引き続き収録しています。
 
 - コードとドキュメント：[Apache-2.0](LICENSE)。
 - Freesound 音声：プロジェクトに保存した個別ライセンスに従い、CC BY のクレジットは公開時にも掲載してください。
-- BGM は [ATTRIBUTION.md](assets/audio/ATTRIBUTION.md)、テンプレート音声は [出典記録](template/public/audio/ATTRIBUTION.md) を参照。
+- BGM は [ATTRIBUTION.md](skills/video-shotcraft/assets/audio/ATTRIBUTION.md)、テンプレート音声は [出典記録](skills/video-shotcraft/template/public/audio/ATTRIBUTION.md) を参照。
 - [Remotion](https://www.remotion.dev/) には独自の[ライセンス](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md)があります：
   個人と小規模チームは無料、企業は有料ライセンスが必要な場合があります。
 

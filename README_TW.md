@@ -15,8 +15,8 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/Vincentwei1021/video-shotcraft)](https://github.com/Vincentwei1021/video-shotcraft/stargazers)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
-[![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-d97757)](SKILL.md)
-[![Codex](https://img.shields.io/badge/Codex-skill-10a37f)](SKILL.md)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-d97757)](skills/video-shotcraft/SKILL.md)
+[![Codex](https://img.shields.io/badge/Codex-skill-10a37f)](skills/video-shotcraft/SKILL.md)
 [![AtomGit Star](https://atomgit.com/VincentWei/video-shotcraft/star/badge.svg)](https://atomgit.com/VincentWei/video-shotcraft)
 
 <a href="https://trendshift.io/repositories/88911?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-88911" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/88911" alt="Vincentwei1021%2Fvideo-shotcraft | Trendshift" width="250" height="55"/></a>
@@ -37,7 +37,7 @@
 
 **流程**
 
-![8 秒迴圈流程動圖：你的產品 → 抓取真實頁面 → 鏡頭配方卡排分鏡 → Remotion 動畫 → 踩點剪輯與聲音設計 → 渲染與逐幀驗收 → MP4、動效工作臺與剪映工程](assets/readme/workflow.gif)
+![8 秒迴圈流程動圖：你的產品 → 抓取真實頁面 → 鏡頭配方卡排分鏡 → Remotion 動畫 → 踩點剪輯與聲音設計 → 渲染與逐幀驗收 → MP4、動效工作臺與剪映工程](skills/video-shotcraft/assets/readme/workflow.gif)
 
 ## 最近更新
 
@@ -50,7 +50,7 @@
 - **2026-08 · 系列新成員 [video-talkcraft](https://github.com/Vincentwei1021/video-talkcraft)**：口播影片版，
   給它口播稿和成品配音，所有動效節拍都釘在人聲上（[78 條口播動效樣片](https://vincentwei1021.github.io/video-talkcraft/)）。
 - **2026-08 · 剪映工程匯出**：成片可匯出為可編輯的剪映草稿——底片按鏡頭切段、字幕重建為原生文字軌、
-  SFX/BGM 獨立音軌。Mac 剪映 11.2 實測驗收（[方法](references/jianying-export.md)）。
+  SFX/BGM 獨立音軌。Mac 剪映 11.2 實測驗收（[方法](skills/video-shotcraft/references/jianying-export.md)）。
 
 ## ❤️ Sponsors
 
@@ -106,8 +106,8 @@ npx skills add Vincentwei1021/video-shotcraft
 ```bash
 git clone https://github.com/Vincentwei1021/video-shotcraft.git
 cd video-shotcraft
-ln -s "$(pwd)" ~/.claude/skills/video-shotcraft   # Claude Code
-ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
+ln -s "$(pwd)/skills/video-shotcraft" ~/.claude/skills/video-shotcraft   # Claude Code
+ln -s "$(pwd)/skills/video-shotcraft" ~/.codex/skills/video-shotcraft    # Codex
 ```
 
 國內訪問 GitHub 慢的話，可以從 AtomGit 映象克隆：
@@ -153,7 +153,7 @@ ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
 </table>
 
 每張卡在 `references/shots/<类别>/<卡名>.md`，對應的 Remotion 實現在 `demos/<类别>/<卡名>/`
-（怎麼接進你的工程見 [demos/README.md](demos/README.md)）。
+（怎麼接進你的工程見 [demos/README.md](skills/video-shotcraft/demos/README.md)）。
 
 ## 動效工作臺
 
@@ -161,9 +161,9 @@ ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
 拆成鏡頭 / 轉場 / 字幕 / 音效多軌；選中任意鏡頭可以改文案、字號和顏色，鏡頭可挪、可裁、可變速，鏡頭庫裡的
 150 個鏡頭都能直接拖上軌，改完用 Remotion 匯出。預覽與渲染逐幀一致。
 
-![動效工作臺](workbench/docs/overview.png)
+![動效工作臺](skills/video-shotcraft/workbench/docs/overview.png)
 
-[工作臺圖文指南：各區域與功能](workbench/GUIDE.md) · [成片接入契約](references/workbench.md)
+[工作臺圖文指南：各區域與功能](skills/video-shotcraft/workbench/GUIDE.md) · [成片接入契約](skills/video-shotcraft/references/workbench.md)
 
 ## 你會拿到什麼
 
@@ -173,11 +173,11 @@ ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
 | Remotion 工程 | 整支片的原始碼：每個鏡頭都是一個 React 元件，你或 agent 都能改 |
 | 動效工作臺 | 交付後自動開啟：多軌時間線、屬性面板、變速、換鏡頭、匯出（[詳情](#動效工作臺)） |
 | 剪映工程 | 可選：可編輯的剪映草稿，鏡頭分段、字幕和音軌都能改 |
-| 社交平臺釋出 | 可選，使用者要求時：通過 Upload-Post 把成片發到 TikTok / Instagram / YouTube / LinkedIn / X 等；先確認文案與平臺、dry-run 後再發（[說明](references/publish-upload-post.md)） |
+| 社交平臺釋出 | 可選，使用者要求時：通過 Upload-Post 把成片發到 TikTok / Instagram / YouTube / LinkedIn / X 等；先確認文案與平臺、dry-run 後再發（[說明](skills/video-shotcraft/references/publish-upload-post.md)） |
 
 另外還附帶：可複用的 Remotion 元件（2.5D 頁面相機、字幕、閃切、數字滾動）、149 個音效和 5 首 BGM、
 頁面素材採集指令碼，以及整套製作方法（素材採集、風格定調、分鏡、聲音設計、節奏卡點、最終驗收），
-見 [references/](references/pipeline.md)。
+見 [references/](skills/video-shotcraft/references/pipeline.md)。
 
 ## 作品展示
 
@@ -216,7 +216,7 @@ Remotion 首次渲染時會自動下載自己的無頭 Chrome。已在 macOS 上
 
 ```text
 video-shotcraft/
-├── SKILL.md                 # Agent 使用入口与核心制作规则
+├── skills/video-shotcraft/SKILL.md                 # Agent 使用入口与核心制作规则
 ├── references/
 │   ├── pipeline.md          # 完整制作流水线
 │   ├── shots/               # 124 张镜头配方卡，按功能分 10 类
@@ -241,8 +241,8 @@ video-shotcraft/
         └── sfx/<类别>/      # 149 个音效，按场景分 16 类
 ```
 
-完整工作流和實現要求見 [SKILL.md](SKILL.md)、[製作流水線](references/pipeline.md) 與
-[視覺驗收準則](references/aesthetic-rules.md)。
+完整工作流和實現要求見 [SKILL.md](skills/video-shotcraft/SKILL.md)、[製作流水線](skills/video-shotcraft/references/pipeline.md) 與
+[視覺驗收準則](skills/video-shotcraft/references/aesthetic-rules.md)。
 
 </details>
 
@@ -250,7 +250,7 @@ video-shotcraft/
 
 音效按場景 / 材質分 16 類（`transition` `impact` `riser` `camera` `ui` `text` `paper` `film` `light` `data`
 `scifi` `mech` `glass` `fluid` `crowd` `counter`），找音先定類別再挑音色。類別索引與逐檔案用途見
-[sound-design.md](references/sound-design.md)，來源與許可見 [ATTRIBUTION.md](assets/audio/ATTRIBUTION.md)。
+[sound-design.md](skills/video-shotcraft/references/sound-design.md)，來源與許可見 [ATTRIBUTION.md](skills/video-shotcraft/assets/audio/ATTRIBUTION.md)。
 
 模板內的產品截圖為演示素材。對外發布成片前，請替換為你自己產品的截圖，並確認其中的資料、客戶資訊和個人資訊
 是否需要脫敏。
@@ -258,7 +258,7 @@ video-shotcraft/
 ## 許可
 
 - 程式碼與文件：[Apache-2.0](LICENSE)。
-- `assets/audio/` 下的音訊：各自按其授權使用，見 [ATTRIBUTION.md](assets/audio/ATTRIBUTION.md)。
+- `assets/audio/` 下的音訊：各自按其授權使用，見 [ATTRIBUTION.md](skills/video-shotcraft/assets/audio/ATTRIBUTION.md)。
 - [Remotion](https://www.remotion.dev/) 有自己的[許可協議](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md)：
   個人與小團隊免費，公司可能需要付費許可。
 

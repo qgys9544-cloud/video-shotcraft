@@ -15,8 +15,8 @@
 
 [![Звёзды GitHub](https://img.shields.io/github/stars/Vincentwei1021/video-shotcraft)](https://github.com/Vincentwei1021/video-shotcraft/stargazers)
 [![Лицензия](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
-[![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-d97757)](SKILL.md)
-[![Codex](https://img.shields.io/badge/Codex-skill-10a37f)](SKILL.md)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-d97757)](skills/video-shotcraft/SKILL.md)
+[![Codex](https://img.shields.io/badge/Codex-skill-10a37f)](skills/video-shotcraft/SKILL.md)
 [![Звезда AtomGit](https://atomgit.com/VincentWei/video-shotcraft/star/badge.svg)](https://atomgit.com/VincentWei/video-shotcraft)
 
 <a href="https://trendshift.io/repositories/88911?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-88911" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/88911" alt="Vincentwei1021%2Fvideo-shotcraft | Trendshift" width="250" height="55"/></a>
@@ -39,7 +39,7 @@
 
 **Как это работает**
 
-![Восьмисекундный цикл работы: продукт → съёмка реальных страниц → раскадровка с карточками планов → анимация в Remotion → синхронизация с музыкой и звуковое оформление → рендер и покадровая проверка → MP4, Motion Workbench и черновик JianYing](assets/readme/workflow.gif)
+![Восьмисекундный цикл работы: продукт → съёмка реальных страниц → раскадровка с карточками планов → анимация в Remotion → синхронизация с музыкой и звуковое оформление → рендер и покадровая проверка → MP4, Motion Workbench и черновик JianYing](skills/video-shotcraft/assets/readme/workflow.gif)
 
 ## Что нового
 
@@ -54,7 +54,7 @@
   ([78 примеров с озвучкой](https://vincentwei1021.github.io/video-talkcraft/)).
 - **2026-08 · Экспорт в JianYing (CapCut CN).** Готовый ролик превращается в редактируемый черновик JianYing: отдельные клипы для каждого плана,
   нативные дорожки субтитров, отдельные дорожки эффектов и музыки. Проверено в JianYing Pro 11.2 для macOS
-  ([руководство](references/jianying-export.md)).
+  ([руководство](skills/video-shotcraft/references/jianying-export.md)).
 
 ## ❤️ Спонсоры
 
@@ -110,8 +110,8 @@ npx skills add Vincentwei1021/video-shotcraft
 ```bash
 git clone https://github.com/Vincentwei1021/video-shotcraft.git
 cd video-shotcraft
-ln -s "$(pwd)" ~/.claude/skills/video-shotcraft   # Claude Code
-ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
+ln -s "$(pwd)/skills/video-shotcraft" ~/.claude/skills/video-shotcraft   # Claude Code
+ln -s "$(pwd)/skills/video-shotcraft" ~/.codex/skills/video-shotcraft    # Codex
 ```
 
 В материковом Китае, если GitHub работает медленно, клонируйте зеркало AtomGit:
@@ -157,7 +157,7 @@ ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
 </table>
 
 Каждая карточка находится в `references/shots/<category>/<card>.md`, а её реализация на Remotion —
-в `demos/<category>/<card>/` (как подключить её к проекту, см. в [demos/README.md](demos/README.md)).
+в `demos/<category>/<card>/` (как подключить её к проекту, см. в [demos/README.md](skills/video-shotcraft/demos/README.md)).
 
 ## Motion Workbench
 
@@ -166,10 +166,10 @@ ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
 точно по исходному монтажу. Выберите план, чтобы изменить текст, размеры шрифтов и цвета, перемещайте, обрезайте клипы и плавно меняйте скорость,
 добавляйте любой из 150 планов библиотеки и экспортируйте через Remotion. Превью и рендер совпадают покадрово. Языки интерфейса: English / 中文 / Русский.
 
-![Монтажный стол Motion Workbench](workbench/docs/overview.png)
+![Монтажный стол Motion Workbench](skills/video-shotcraft/workbench/docs/overview.png)
 
-[Руководство по монтажному столу: все панели со скриншотами](workbench/GUIDE.md) (на китайском) ·
-[Контракт интеграции](references/workbench.md)
+[Руководство по монтажному столу: все панели со скриншотами](skills/video-shotcraft/workbench/GUIDE.md) (на китайском) ·
+[Контракт интеграции](skills/video-shotcraft/references/workbench.md)
 
 ## Что вы получите
 
@@ -179,11 +179,11 @@ ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
 | Проект Remotion | Полный исходный код ролика: каждый план — React-компонент, который можете изменить вы или агент |
 | Motion Workbench | Открывается после сдачи: дорожки, панель свойств, изменение тайминга, замена планов, экспорт ([подробнее](#motion-workbench)) |
 | Черновик JianYing | По желанию: редактируемый проект JianYing (CapCut CN) с отдельными клипами для каждого плана, субтитрами и аудиодорожками |
-| Публикация в соцсетях | По запросу: публикация готового ролика через Upload-Post в TikTok, Instagram, YouTube, LinkedIn, X и других сервисах. Подтвердите подпись и платформы, затем выполните пробный запуск без публикации ([руководство](references/publish-upload-post.md)) |
+| Публикация в соцсетях | По запросу: публикация готового ролика через Upload-Post в TikTok, Instagram, YouTube, LinkedIn, X и других сервисах. Подтвердите подпись и платформы, затем выполните пробный запуск без публикации ([руководство](skills/video-shotcraft/references/publish-upload-post.md)) |
 
 Также в комплекте: переиспользуемые компоненты Remotion (2.5D-камера для страниц, субтитры, переходы-вспышки, прокрутка цифр), инструменты поиска и загрузки звуков Freesound и
 5 музыкальных треков, скрипты захвата страниц и сам производственный процесс (захват, визуальная концепция, раскадровка,
-звуковое оформление, синхронизация с музыкой, финальная проверка качества) в [references/](references/pipeline.md).
+звуковое оформление, синхронизация с музыкой, финальная проверка качества) в [references/](skills/video-shotcraft/references/pipeline.md).
 
 ## Витрина работ
 
@@ -224,7 +224,7 @@ ln -s "$(pwd)" ~/.codex/skills/video-shotcraft    # Codex
 
 ```text
 video-shotcraft/
-├── SKILL.md                 # Agent entry point and core production rules
+├── skills/video-shotcraft/SKILL.md                 # Agent entry point and core production rules
 ├── references/
 │   ├── pipeline.md          # End-to-end production workflow
 │   ├── shots/               # 124 shot recipe cards in 10 functional categories
@@ -249,18 +249,18 @@ video-shotcraft/
         └── bgm/             # 5 BGM options; SFX downloaded per project
 ```
 
-Полный процесс описан в [SKILL.md](SKILL.md), [производственном процессе](references/pipeline.md) и
-[критериях визуального качества](references/aesthetic-rules.md).
+Полный процесс описан в [SKILL.md](skills/video-shotcraft/SKILL.md), [производственном процессе](skills/video-shotcraft/references/pipeline.md) и
+[критериях визуального качества](skills/video-shotcraft/references/aesthetic-rules.md).
 
 </details>
 
 ## Аудио и ресурсы
 
 Звуковые эффекты загружаются напрямую с [Freesound](https://freesound.org) в проект каждого ролика.
-Общая локальная библиотека SFX удалена. [Руководство по подбору](references/sfx-sourcing.md) описывает поиск,
+Общая локальная библиотека SFX удалена. [Руководство по подбору](skills/video-shotcraft/references/sfx-sourcing.md) описывает поиск,
 фильтрацию CC0 / CC BY, загрузку MP3-превью, измерения и сохранение источников и атрибуции.
 CLI использует стандартную библиотеку Python; для загрузки и анализа нужен FFmpeg. API-ключ не требуется.
-Тайминг и сведение описаны в [sound-design.md](references/sound-design.md). Звуки шаблона сохранены для его
+Тайминг и сведение описаны в [sound-design.md](skills/video-shotcraft/references/sound-design.md). Звуки шаблона сохранены для его
 воспроизведения и регрессионных проверок; для новых продуктовых роликов SFX подбираются на Freesound.
 Пять вариантов BGM остаются в `assets/audio/bgm/`.
 
@@ -271,7 +271,7 @@ CLI использует стандартную библиотеку Python; д�
 
 - Код и документация: [Apache-2.0](LICENSE).
 - Звуки Freesound: лицензия каждого файла записана в манифесте проекта; атрибуция CC BY должна быть опубликована вместе с роликом.
-- BGM: см. [ATTRIBUTION.md](assets/audio/ATTRIBUTION.md). Звуки шаблона: [источники](template/public/audio/ATTRIBUTION.md).
+- BGM: см. [ATTRIBUTION.md](skills/video-shotcraft/assets/audio/ATTRIBUTION.md). Звуки шаблона: [источники](skills/video-shotcraft/template/public/audio/ATTRIBUTION.md).
 - У [Remotion](https://www.remotion.dev/) своя
   [лицензия](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md): бесплатно для частных лиц и небольших
   команд; компаниям может потребоваться платная лицензия.

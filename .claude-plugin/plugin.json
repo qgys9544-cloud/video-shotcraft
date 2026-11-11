@@ -15,5 +15,5 @@
     "product-video",
     "agent-skill"
   ],
-  "skills": "./"
+  "skills": "./skills"
 }
